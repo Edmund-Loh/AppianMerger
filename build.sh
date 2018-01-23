@@ -1,0 +1,1 @@
+clear; rm app; g++ -o app app.cpp tinyxml2.cpp; ls -rtl app
