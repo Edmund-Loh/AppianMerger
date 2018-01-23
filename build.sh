@@ -1,1 +1,1 @@
-clear; rm app; g++ -o app app.cpp tinyxml2.cpp; ls -rtl app
+clear; rm bin/app; g++ -I/include src/app.cpp src/tinyxml2.cpp -o bin/app ; ls -rtl bin/*
