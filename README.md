@@ -31,6 +31,10 @@ app.exe c:/Downloads/Patch_2018 ~/Documents/appian-package/bgp-app/application/_
 |Path of Object Directory|Path of Unzipped Directory of exported Appian Objects which contains objects folders|
 |Path of Application XML|Path of checked out Application XML file eg.appian-package/bgp-app/application/_a-0000db0e-a3c0-8000-0315-010000010000_2041.xml|
 
+### References
+* [TinyXML2] (http://www.grinninglizard.com/tinyxml2/) C++ XML Library
+* [MinGW] (http://www.mingw.org) C++ Compiler for Windows
+
 
 
 
