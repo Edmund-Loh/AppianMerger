@@ -12,6 +12,8 @@ To insert the UUID of the exported objects into the respective object groups if 
 ```bash
 ./app <Path of Object Directory> <Path of Application XML>
 ```
+|Arguments|Description|
+|---|---:|
 |Path of Object Directory|Path of Unzipped Directory of exported Appian Objects which contains objects folders|
 |Path of Application XML|Path of checked out Application XML file eg.appian-package/bgp-app/application/_a-0000db0e-a3c0-8000-0315-010000010000_2041.xml|
 
