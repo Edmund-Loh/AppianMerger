@@ -1,1 +1,1 @@
-clear; rm bin/app; g++ -I/include src/app.cpp src/tinyxml2.cpp -o bin/macOS/app ; ls -rtl bin/*
+clear; rm bin/macOS/appianMerger; g++ -I/include src/app.cpp src/tinyxml2.cpp -o bin/macOS/appianMerger ; ls -rtl bin/macOS/*

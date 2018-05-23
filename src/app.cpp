@@ -3,6 +3,7 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <iostream>
+#include <string.h>
 #include "tinyxml2.h"
 
 using namespace std;
@@ -10,6 +11,8 @@ using namespace tinyxml2;
 
 DIR *dpdf;
 struct dirent *epdf;
+
+bool gTestFlag = false;
 
 bool directory_exists( const std::string &directory ){
     if( !directory.empty() ){
@@ -64,8 +67,21 @@ string get_xsd_name( const std::string &filepath ){
 int main(int argc, char* argv[])
 {
     if ( argc < 3 ){
-        cout << "ERROR! Missing Arguments ./app <Objects Directory> <Application Path>" << endl;
+        cout << endl;
+        cout << "Usage:" << endl;
+        cout << "./appianMerger objectsDirectory applicationXml [options...]" << endl;
+        cout << endl;
+        cout << "Options:" << endl;
+        cout << "\t-t \t\t" << "Test Only, No Change To Application XML" << endl << endl;
         return 0;
+    }
+
+    if ( argc == 4 ){
+        if (strcmp(argv[3], "-t") == 0)
+        {
+            cout << "Test Only" << endl;
+            gTestFlag = true;
+        }
     }
 
     string oriRootPathStr (argv[1]);
@@ -92,7 +108,8 @@ int main(int argc, char* argv[])
     }
     
     // Backup
-    xml_doc.SaveFile("backup.xml");
+    if (!gTestFlag)
+        xml_doc.SaveFile("backup.xml");
 
     for (tinyxml2::XMLElement* itemChild = root->FirstChildElement(); itemChild != NULL; itemChild = itemChild->NextSiblingElement())
     {
@@ -161,7 +178,8 @@ int main(int argc, char* argv[])
 
     }
     
-    xml_doc.SaveFile(argv[2]);
+    if (!gTestFlag)
+        xml_doc.SaveFile(argv[2]);
 
 
     cout << "Successful" << endl;
