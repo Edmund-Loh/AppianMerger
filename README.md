@@ -10,7 +10,9 @@ To insert the UUID of the exported objects into the respective object groups if 
 
 ## MacOS/Linux Usage
 ```bash
-./app <Path of Object Directory> <Path of Application XML>
+./appianMerger <Path of Object Directory> <Path of Application XML>
+
+./appianMerger <Path of Object Directory> <Path of Application XML> [Options...]
 ```
 ### Example
 ```bash
@@ -19,7 +21,9 @@ To insert the UUID of the exported objects into the respective object groups if 
 
 ## Windows Usage
 ```bash
-app.exe <Path of Object Directory> <Path of Application XML>
+appianMerger.exe <Path of Object Directory> <Path of Application XML>
+
+appianMerger.exe <Path of Object Directory> <Path of Application XML> [Options...]
 ```
 ### Example
 ```bash
@@ -30,6 +34,10 @@ app.exe c:/Downloads/Patch_2018 ~/Documents/appian-package/bgp-app/application/_
 |:-----------------------|:---|
 |Path of Object Directory|Path of Unzipped Directory of exported Appian Objects which contains objects folders|
 |Path of Application XML|Path of checked out Application XML file eg.appian-package/bgp-app/application/_a-0000db0e-a3c0-8000-0315-010000010000_2041.xml|
+
+|Options|Description|
+|:-----------------------|:---|
+|-t|Only Check for Existing or Missing Objects in the Application. No change to application XML|
 
 ### References
 * [TinyXML2] (http://www.grinninglizard.com/tinyxml2/) C++ XML Library
